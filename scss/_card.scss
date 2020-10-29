@@ -1,0 +1,40 @@
+@import 'animation';
+
+.card {
+  background: url($backgroundQuote);
+  background-repeat: no-repeat;
+  background-position: 50% 60%;
+  background-size: 15%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  height: 90%;
+  &__title {
+    &--bold {
+      color: $DarkBlue;
+    }
+    display: flex;
+    flex-direction: column;
+    color: $GrayishBlue;
+    font-size: 1em;
+    text-align: center;
+  }
+  &__quote {
+    margin-top: 24%;
+    font-weight: 700;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 30px;
+    width: 95%;
+    color: $DarkBlue;
+    @extend .animation-bezier;
+  }
+  &__image {
+    width: 225px;
+    height: 220px;
+    border-radius: 5px;
+    box-shadow: 0 0 17px -9px black;
+    @extend .animation-bezier;
+  }
+}

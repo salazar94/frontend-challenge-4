@@ -1,0 +1,72 @@
+@import 'vars';
+@import 'card';
+@import 'button';
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin-top: 10%;
+  background-image: url($backgroundImage);
+  background-repeat: no-repeat;
+  background-attachment: unset;
+  background-size: 80%;
+  background-position: top;
+}
+.none,
+h2.none {
+  display: none;
+}
+
+main {
+  height: 100%;
+  margin-top: 10%;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    margin-top: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: right;
+  }
+  main {
+    margin-top: 0;
+    padding: 50px 50px;
+    height: 0;
+  }
+  .card {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 6fr 4fr;
+  }
+  .card__image {
+    grid-column: 2;
+    grid-row: 1;
+    height: 60vh;
+    width: 30vw;
+    z-index: -10;
+  }
+  .card__quote {
+    grid-column: 1;
+    margin-top: 0;
+    font-size: 3em;
+    font-weight: 400;
+    width: 95%;
+    text-align: left;
+    line-height: 50px;
+    margin-left: 13%;
+  }
+  .card__title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .card-button{
+    width: 100px;
+    left: 10%;
+    bottom:15px;
+    justify-content: flex-start;
+  }
+}

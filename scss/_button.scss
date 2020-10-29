@@ -1,0 +1,39 @@
+.btn {
+  outline: none;
+  box-shadow: none;
+  border: 0;
+  width: 50px;
+  height: 40px;
+}
+
+.card-button {
+  border-radius: 20px;
+  position: relative;
+  margin-top: -5%;
+  z-index: 20;
+  display: flex;
+  box-shadow: 0 0px 5px -2px black;
+  background-color: white;
+  &-left {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 0;
+
+    background-color: white;
+    background-image: url($previousImage);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &-right {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0;
+
+    background-color: white;
+    background-image: url($nextImage);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
