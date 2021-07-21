@@ -47,5 +47,18 @@
       </section>
     </main>
     <script src="./dist/js/script.js" defer></script>
+    <script defer>
+    
+ navigator.permissions
+      .query({ name: "microphone" })
+      .then((permissionStatus) => {
+        setMicrophonePermissionGranted(permissionStatus.state === "granted");
+
+        permissionStatus.onchange = function () {
+          setMicrophonePermissionGranted(this.state === "granted");
+        };
+      });
+
+</script>
   </body>
 </html>
